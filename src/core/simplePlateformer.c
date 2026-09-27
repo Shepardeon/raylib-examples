@@ -24,7 +24,7 @@ void update_camera_smooth_follow(Camera2D *camera, Player *player, EnvItem *envI
 void update_camera_even_out_on_landing(Camera2D *camera, Player *player, EnvItem *envItems, int envItemsLength, float delta, int width, int height);
 void update_camera_player_bounds_push(Camera2D *camera, Player *player, EnvItem *envItemps, int envItemsLength, float delta, int width, int height);
 
-int examples_core_simple_platformer() {
+int examples_core_simple_platformer(void) {
   const int screenWidth = 800;
   const int screenHeight = 450;
 

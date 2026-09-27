@@ -1,6 +1,6 @@
 #include <raylib.h>
 
-int examples_core_simple_window() {
+int examples_core_simple_window(void) {
   const int screen_width = 800;
   const int screen_height = 450;
   const int target_fps = 60;

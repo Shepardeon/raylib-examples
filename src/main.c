@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <examples.h>
+#include "examples.h"
 
 #define MAX_LENGTH 10
 #define NELEM(x) (sizeof(x) / sizeof((x)[0]))
@@ -11,9 +11,10 @@ void read_command(char* buffer);
 void print_help();
 int run_example(int choice);
 
-static int (*examples[2])(void) = {
+static int (*examples[3])(void) = {
   examples_core_simple_window,
   examples_core_simple_platformer,
+  examples_core_simple_fps,
 };
 
 int main(void) {
@@ -81,6 +82,7 @@ void print_help() {
   printf("Available examples:\n");
   printf("\t1 - [core] Simple Window\n");
   printf("\t2 - [core] Simple Platformer\n");
+  printf("\t3 - [core] Simple FPS\n");
   printf("\n\n");
 }
 
