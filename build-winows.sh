@@ -8,3 +8,4 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-mingw64.cmake
 cmake --build .
 cmake --install . --prefix ../.out-windows/
 cd ..
+./.out-windows/bin/examples.exe

@@ -1,6 +1,5 @@
 #include <raylib.h>
 #include <raymath.h>
-#include <stdio.h>
 
 #define GRAVITY 32.0F
 #define MAX_SPEED 20.0F
@@ -61,7 +60,6 @@ int examples_core_simple_fps(void) {
 
   while (!WindowShouldClose()) {
     Vector2 mouse_delta = GetMouseDelta();
-    printf("mouse_delta.x: %f\nmouse_delta.y: %f\n", mouse_delta.x, mouse_delta.y);
     look_rotation.x -= mouse_delta.x * sensivity.x;
     look_rotation.y += mouse_delta.y * sensivity.y;
 
@@ -180,7 +178,6 @@ void update_camera_fps(Camera3D *camera) {
   const Vector3 UP = (Vector3){ 0.0F, 1.0F, 0.0F };
   const Vector3 TARGET_OFFSET = (Vector3){ 0.0F, 0.0F, -1.0F };
 
-  printf("look_rotation.x: %f\n", look_rotation.x);
   Vector3 yaw = Vector3RotateByAxisAngle(TARGET_OFFSET, UP, look_rotation.x);
 
   float max_angle_up = Vector3Angle(UP, yaw);
